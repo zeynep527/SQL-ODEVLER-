@@ -1,0 +1,1 @@
+SELECT* FROM customer WHERE customer_id IN (SELECT customer_id FROM payment WHERE amount= (SELECT max (amount)FROM payment))
